@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from '../views/Home';
 import About from '../views/About';
 import Service from '../views/Service';
@@ -11,9 +11,9 @@ import RootLayout from '../RootLayout';
 
 const ReactRoute = () => {
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
-      element: <RootLayout />,   // 👈 wrap everything
+      element: <RootLayout />,
       children: [
         { path: "/", element: <Home /> },
         { path: "/about", element: <About /> },
@@ -29,4 +29,4 @@ const ReactRoute = () => {
   return <RouterProvider router={router} />;
 };
 
-export default ReactRoute
+export default ReactRoute;
