@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+}
+:root {
+  --primary: #1E3A5F;
+  --secondary: #4FA3D1;
+  --accent: #6CC24A;
+  --accent-purple: #7B5FAF;
+
+  --background: #F4F7FA;
+  --surface: #FFFFFF;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+}

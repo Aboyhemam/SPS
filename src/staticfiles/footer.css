@@ -1,0 +1,83 @@
+:root {
+  --primary: #1E3A5F;
+  --secondary: #4FA3D1;
+  --accent: #6CC24A;
+  --accent-purple: #7B5FAF;
+
+  --background: #F4F7FA;
+  --surface: #FFFFFF;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+}
+/* ===== Footer Main ===== */
+.footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 60px 20px 20px 20px;
+}
+
+/* ===== Container ===== */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ===== Sections ===== */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Logo */
+.footer-logo {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Headings */
+.footer-section h3 {
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+/* Paragraph */
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li:hover {
+  color: var(--secondary);
+}
+
+/* Bottom Line */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  opacity: 0.8;
+}
+.foot-link{
+    text-decoration: none;
+    color: white;
+}

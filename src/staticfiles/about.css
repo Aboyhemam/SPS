@@ -1,0 +1,159 @@
+:root {
+  --primary: #1E3A5F;
+  --secondary: #4FA3D1;
+  --accent: #6CC24A;
+  --accent-purple: #7B5FAF;
+
+  --background: #F4F7FA;
+  --surface: #FFFFFF;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+}
+/* ===== Main Wrapper ===== */
+
+.about {
+  background-color: var(--background);
+  padding: 80px 20px;
+}
+
+/* ===== Description Section ===== */
+.descript {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.header-about h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+.sub-header {
+  margin-top: 25px;
+}
+
+.sub-header h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== Service Section ===== */
+.service {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.service-head h3 {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Decorative underline */
+.service-head h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--accent),
+    var(--accent-purple)
+  );
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Service Cards Layout ===== */
+.service-body {
+  max-width: 1100px;
+  margin: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ===== Individual Box ===== */
+.body-box {
+  background-color: var(--surface);
+  padding: 30px 40px;
+  border-radius: 12px;
+  min-width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Hover Effect */
+.body-box:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.body-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
+/* ===============================
+   Smooth Fade In Animation
+=================================*/
+
+@keyframes fadeUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+.header,
+.sub-header,
+.service-head,
+.body-box {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Animate description */
+.header {
+  animation: fadeUpSmooth 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.sub-header {
+  animation: fadeUpSmooth 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Animate service heading */
+.service-head {
+  animation: fadeUpSmooth 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* Stagger service boxes */
+.body-box {
+  animation: fadeUpSmooth 0.8s ease forwards;
+}
+
+.body-box:nth-child(1) { animation-delay: 1s; }
+.body-box:nth-child(2) { animation-delay: 1.15s; }
+.body-box:nth-child(3) { animation-delay: 1.3s; }
+.body-box:nth-child(4) { animation-delay: 1.45s; }
+.body-box:nth-child(5) { animation-delay: 1.6s; }

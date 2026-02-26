@@ -1,0 +1,128 @@
+/* ===== Page Wrapper ===== */
+.security-page {
+  background-color: var(--background);
+  padding: 100px 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+/* ===== Header ===== */
+.security-header {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.security-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+/* Gradient underline */
+.security-header h1::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--accent),
+    var(--accent-purple)
+  );
+  display: block;
+  margin: 18px auto 0;
+  border-radius: 10px;
+}
+
+.security-header p {
+  margin-top: 25px;
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== Cards Container ===== */
+.security-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ===== Individual Card ===== */
+.security-card {
+  background-color: var(--surface);
+  padding: 35px 30px;
+  border-radius: 16px;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Stagger animation */
+.security-card:nth-child(1) { animation-delay: 0.2s; }
+.security-card:nth-child(2) { animation-delay: 0.4s; }
+.security-card:nth-child(3) { animation-delay: 0.6s; }
+.security-card:nth-child(4) { animation-delay: 0.8s; }
+.security-card:nth-child(5) { animation-delay: 1s; }
+.security-card:nth-child(6) { animation-delay: 1.2s; }
+
+/* Left accent line */
+.security-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: linear-gradient(
+    180deg,
+    var(--secondary),
+    var(--accent)
+  );
+  transition: 0.4s ease;
+}
+
+/* Hover effect */
+.security-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.security-card:hover::before {
+  width: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    var(--accent-purple)
+  );
+}
+
+.security-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ===== Fade Animation ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

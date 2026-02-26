@@ -1,0 +1,131 @@
+/* ===== Main Wrapper ===== */
+.service-body {
+  background-color: var(--background);
+  padding: 100px 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+/* ===== Page Heading ===== */
+.main-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.main-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.5px;
+}
+
+/* Premium gradient underline */
+.main-header h1::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--accent),
+    var(--accent-purple)
+  );
+  display: block;
+  margin: 16px auto 0;
+  border-radius: 10px;
+}
+
+/* ===== Individual Service Card ===== */
+.services {
+  max-width: 950px;
+  width: 950px;
+  margin: 0 auto 40px auto;
+  background-color: var(--surface);
+  padding: 40px 45px;
+  border-radius: 16px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated left accent bar */
+.services::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: linear-gradient(
+    180deg,
+    var(--secondary),
+    var(--accent)
+  );
+  transition: 0.4s ease;
+}
+
+/* Hover Effect */
+.services:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.services:hover::before {
+  width: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    var(--accent-purple)
+  );
+}
+
+/* ===== Service Title ===== */
+.service-topic h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+/* ===== Service Description ===== */
+.service-details h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ===== Ordered List Styling ===== */
+.service-details ol {
+  margin-top: 15px;
+  padding-left: 22px;
+}
+
+.service-details ol li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== Fade In Animation ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply to service cards */
+.services {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}

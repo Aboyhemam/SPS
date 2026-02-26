@@ -1,0 +1,142 @@
+:root {
+  --primary: #1E3A5F;
+  --secondary: #4FA3D1;
+  --accent: #6CC24A;
+  --accent-purple: #7B5FAF;
+
+  --background: #F4F7FA;
+  --surface: #FFFFFF;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+}
+
+/* ===== Main Section ===== */
+.upper-body {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: white;
+  padding: 100px 20px 80px 20px;
+  text-align: center;
+}
+
+/* ===== Headline ===== */
+.headline h1 {
+  font-size: 42px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* ===== Sub Headline ===== */
+.sub-headline h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 25px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+}
+
+/* ===== Description ===== */
+.des h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* ===== Action Section ===== */
+.lower-body {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: var(--background);
+  flex-wrap: wrap;
+}
+
+/* ===== Action Cards ===== */
+.action-box {
+  background-color: var(--surface);
+  padding: 25px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Hover Effect */
+.action-box:hover {
+  transform: translateY(-6px);
+  border: 2px solid var(--secondary);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Action Text */
+.action h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ===== Fade In Animation ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate hero section elements */
+.headline,
+.sub-headline,
+.des {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.headline {
+  animation-delay: 0.2s;
+}
+
+.sub-headline {
+  animation-delay: 0.5s;
+}
+
+.des {
+  animation-delay: 0.8s;
+}
+
+/* Animate action boxes */
+.action-box {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.action-box:nth-child(1) {
+  animation-delay: 1.1s;
+}
+
+.action-box:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.action-box:nth-child(3) {
+  animation-delay: 1.5s;
+}
