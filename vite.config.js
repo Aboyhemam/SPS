@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/SPS",
+  base: "/SPS/",
 })
